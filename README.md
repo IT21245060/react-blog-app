@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# React Blog App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A minimal single-page blog UI built with Create React App. This repository contains a small, component-driven front-end for a blog (no backend). It uses static data and demonstrates common CRUD-related UI pages (Home, Single Post, Write, Register/Login, Settings).
+
+## Features
+- Home page with header, posts list, and sidebar
+- Single post view with author and content layout
+- Write page UI for creating posts (form only; no backend)
+- Login and Register pages (UI only)
+- Settings page (UI only)
+- Component-based structure with co-located CSS files
+
+## Tech Stack
+- React 19 (Create React App)
+- JavaScript (ES6+)
+- CSS (component-level styles)
+- Font Awesome (via CDN in `public/index.html`)
+
+## Project Structure (key files)
+- `src/App.js` — main app mount and page selection
+- `src/index.js` — React entry
+- `src/components/` — reusable UI components (Topbar, Header, Posts, Post, Sidebar, SinglePost)
+- `src/pages/` — pages (home, single, write, settings, login, register)
+
+Example component layout:
+
+```
+src/
+  components/
+    topbar/Topbar.jsx
+    header/Header.jsx
+    posts/Posts.jsx
+    post/Post.jsx
+    sidebar/Sidebar.jsx
+    singlePost/SinglePost.jsx
+  pages/
+    home/Home.jsx
+    single/Single.jsx
+    write/Write.jsx
+    settings/Settings.jsx
+    login/Login.jsx
+    register/Register.jsx
+```
+
+## Installation
+1. Clone the repo (if not already cloned):
+
+```bash
+git clone https://github.com/IT21245060/react-blog-app.git
+cd react-blog-app
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
 
 ## Available Scripts
+- `npm start` — runs the app in development mode (http://localhost:3000)
+- `npm run build` — builds the app for production into `build/`
+- `npm test` — runs tests (CRA test runner)
 
-In the project directory, you can run:
+## Usage
+- The app is purely front-end and uses static data in components. To modify content, edit the components under `src/components/` or the pages under `src/pages/`.
+- Icons and fonts are provided through `public/index.html` (Google Fonts + Font Awesome CDN).
 
-### `npm start`
+## Deployment
+Build with `npm run build` and serve the `build/` directory with any static host (Netlify, Vercel, GitHub Pages, etc.).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Contributing
+This project is a UI demo. If you'd like to contribute:
+- Fork the repo and open a pull request with focused changes.
+- Keep component styles co-located (component folder + CSS file).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Notes
+- No backend or persistence is included. To add full CRUD you can wire the UI to an API and update the Posts/SinglePost components to fetch and modify data.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+If you want the README adapted further (screenshots, CI/CD, or a live demo link), tell me which addition you prefer and I will update it.
